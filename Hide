@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function hide(){
+            var div = document.getElementById('div');
+            div.style="display:none;"
+        }
+        function show(){
+           var div = document.getElementById('div');
+            div.style="display:block;"
+        }
+        //function toggle(){
+           // var div = document.getElementById('div');
+           // if(div.style.display=="none"){
+            //    div.style.display="block";
+           // }
+           // else{
+           //     div.style.display="none";
+           // }
+           
+        //}
+        function toggle(btn){
+            var div = document.getElementById('div');
+            if(div.style.display == 'none'){
+                div.style.display = 'block';
+                btn.innerHTML = 'hide';
+            }else{
+                 div.style.display = 'none';
+                 btn.innerHTML = 'hide';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Hide and show</h1>
+    <div id="div">
+        <h1>I am a div</h1>
+    </div>
+    <button onclick="hide();">hide</button>
+    <button onclick="show();">show</button>
+    <button onclick="toggle(this);">show</button>
+</body>
+</html>
